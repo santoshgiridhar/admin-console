@@ -1,0 +1,15 @@
+{{^loginSuccess}}
+<div class="wrapper">
+  <form class="form-signin" novalidate>       
+    <h2 class="form-signin-heading">Login</h2>
+    <input type="text" class="form-control" name="username" placeholder="Username" can-value="{loginName}" />
+    <input type="password" class="form-control" name="password" placeholder="Password" can-value="{loginPassword}"/>      
+    <button class="btn btn-lg btn-primary btn-block" can-click="loginUser">Login</button>   
+  </form>
+</div>
+{{/loginSuccess}}
+
+{{#loginSuccess}}
+  <page-dashboard></page-dashboard>
+{{/loginSuccess}}
+
