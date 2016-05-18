@@ -1,7 +1,7 @@
-<can-import from="node_modules/grid-component/src/styles.less!" />
+<can-import from="grid-component/src/styled">
+<can-import from="grid-filter" />
 <h1>Sample Grid 1</h1>
 
-<!-- <can-import from="grid-filter" /> -->
 
 <grid-component {(rows)}="items">
 
