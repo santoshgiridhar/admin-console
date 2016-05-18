@@ -10,11 +10,20 @@
 import can from 'can';
 import $ from 'jquery';
 import bootstrap from 'bootstrap';
+import _ from 'lodash';
 import css_bootstrap from 'bootstrap.css!';
 import 'index.less!';
 
-$('#demo').viewModel().attr({
-  
-});
+
+$("#demo").viewModel().attr({
+        rows: new can.List(_.times(10, i => {
+            return {
+                region: ['Europe','America'][i % 2],
+                country: ['AUT','USA','SWE','CAN'][i % 4],
+                amount: [100, 200, 300][i % 3]
+            };
+        })),
+        selectedRow: null
+    });
 
 </script>
