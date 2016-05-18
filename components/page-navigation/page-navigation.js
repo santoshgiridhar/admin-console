@@ -4,6 +4,10 @@ import 'can/map/define/';
 import './style.less!';
 import VM from './view-model';
 import template from './template.stache!';
+import 'components/page-dashboard/';
+import 'components/page-samplegrid1/';
+import 'components/page-samplegrid2/';
+
 
 
 can.Component.extend({

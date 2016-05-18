@@ -44,13 +44,13 @@
                     <a href="#" id="menu-toggle"><i class="fa fa-fw fa-user-plus"></i>  Menu</a>
                 </li> -->
                 <li>
-                    <a href="#" can-click="gotoMenu1()"><i class="fa fa-fw fa-user-plus"></i>  Menu_1</a>
+                    <a href="/dashboard"><i class="fa fa-fw fa-user-plus"></i>  Menu_1</a>
                 </li>
                 <li>
-                    <a href="#" can-click="gotoMenu2()"><i class="fa fa-fw fa-paper-plane-o"></i> Menu_2</a>
+                    <a href="/samplegrid1"><i class="fa fa-fw fa-paper-plane-o"></i> Menu_2</a>
                 </li>
                 <li>
-                    <a href="#" can-click="gotoMenu3()"><i class="fa fa-fw fa fa-question-circle"></i> Menu_3</a>
+                    <a href="/samplegrid2"><i class="fa fa-fw fa fa-question-circle"></i> Menu_3</a>
                 </li>
             </ul>
         </div>
@@ -64,6 +64,17 @@
             <div class="row" id="main" >
                 <div class="col-sm-12 col-md-12 well" id="content">
                     <h1>Welcome Admin!</h1>
+                    {{#switch page}}
+                        {{#case "dashboard"}}
+                            <page-dashboard></page-dashboard>
+                        {{/case}}
+                        {{#case "samplegrid1"}}
+                            <page-samplegrid1></page-samplegrid1>
+                        {{/case}}
+                        {{#case "samplegrid2"}}
+                            <page-samplegrid2></page-samplegrid2>
+                        {{/case}}
+                    {{/switch}}
                 </div>
             </div>
             <!-- /.row -->
