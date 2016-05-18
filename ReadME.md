@@ -70,7 +70,7 @@ npm test
 
 ## Contact
 
-For more information on AngularJS please check out http://angularjs.org/
+For more information on CanJS please check out http://canjs.com/
 
 [git]: http://git-scm.com/
 [canjs]: http://canjs.com/
