@@ -1,0 +1,18 @@
+# Miscellaneous OS and editor meta files
+*~
+.metadata.*
+.svn
+.svn*
+.metadata
+.metadata*
+.project
+.DS_Store
+.idea
+.idra*
+
+# Configs and dependencies
+node_modules/
+
+# Build-related files
+dist/
+docs
