@@ -4,7 +4,7 @@ import 'can/map/define/';
 import './style.less!';
 import VM from './view-model';
 import template from './template.stache!';
-import pagenavigation from 'components/page-navigation/';
+//import pagenavigation from 'components/page-navigation/';
 //import pagelogout from 'components/page-logout/';
 
 

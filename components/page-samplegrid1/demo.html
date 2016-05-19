@@ -5,18 +5,14 @@
 </script>
 
 <script src="../../node_modules/steal/steal.js" main="can/view/autorender/">
-
-
 import can from 'can';
 import $ from 'jquery';
 import bootstrap from 'bootstrap';
 import _ from 'lodash';
-import css_bootstrap from 'bootstrap.css!';
-import 'index.less!';
-
+import 'models/samplegrid1/fixture';
 
 $("#demo").viewModel().attr({
-        rows: new can.List(_.times(10, i => {
+        listData: new can.List(_.times(10, i => {
             return {
                 region: ['Europe','America'][i % 2],
                 country: ['AUT','USA','SWE','CAN'][i % 4],
@@ -25,5 +21,4 @@ $("#demo").viewModel().attr({
         })),
         selectedRow: null
     });
-
 </script>

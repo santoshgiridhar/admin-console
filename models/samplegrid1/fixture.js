@@ -3,20 +3,31 @@ import 'can/util/fixture/';
 import URL from 'utils/urls';
 import _ from 'lodash';
 
-function getData(params) {
-	var data = {
-		"status": "SUCCESS",
-		"responseCode": "0000",
-		"responseText": "Request processed successfully",
-		"loginUserName": "test",
-		"loginPassword": "test"
-	}
+var i = -1, items =10, params=null;
+function getData() {
+  var sample_data = {
+    'sampleData': (i < items - 1) && _.times(params.limit === null ? items : params.limit, function(k) {
+      return {
+        'amount': Math.round(122921.39 * Math.random() * 100) / 100,
+        'country': ['IND', 'EUR', 'RUS'][Math.floor(Math.random() * 3)],
+        'region': ['India', 'Europe', 'Russia'][Math.floor(Math.random() * 3)],
+        'currency': 'USD',
+        'content': ['Movie', 'Music', 'RingTone', 'Radio'][Math.floor(Math.random() * 4)]
+      }
+    }),
+    'totRecCnt': items,
+    'responseCode': '0000',
+    'status': 'SUCCESS',
+    'view': 'Sample Grid 1',
+    'responseText': 'Request processed successfully'
+  };
+  return sample_data;
 }
 
 
-var url = URL + 'adminmodule/samplegrid1';
+var url = '/samplegrid1';
 can.fixture('POST ' + url, function(options) {
 	console.log('FIXTURE: ' + url, arguments);
 	var params = JSON.parse(options.data);
-	return getData(params);
+	return getData();
 });
