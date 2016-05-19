@@ -6,7 +6,7 @@ import _ from 'lodash';
 var i = -1, items =10, params=null;
 function getData() {
   var sample_data = {
-    'sampleData': (i < items - 1) && _.times(params.limit === null ? items : params.limit, function(k) {
+    'sampleData': (i < items - 1) && _.times(params === null ? items : params, function(k) {
       return {
         'amount': Math.round(122921.39 * Math.random() * 100) / 100,
         'country': ['IND', 'EUR', 'RUS'][Math.floor(Math.random() * 3)],
@@ -26,8 +26,8 @@ function getData() {
 
 
 var url = '/samplegrid1'; console.log("santosh-0", url);
-can.fixture('GET ' + url, function(options) {
+can.fixture('GET ' + url, function() {
 	console.log('FIXTURE: ' + url);
-	var params = JSON.parse(options.data);
+	//var params = JSON.parse(options.data);
 	return getData();
 });
