@@ -1,15 +1,13 @@
-<!-- <can-import from="grid-component/src/styled"> -->
-<can-import from="node_modules/grid-component/src/styles.less!" />
+<can-import from="grid-component/src/styled" />
+<!-- <can-import from="node_modules/grid-component/src/styles.less!" /> -->
 <can-import from="grid-filter" />
 <h1>Sample Grid 1</h1>
 
-items = {{sampleData}}
+items = {{data}}
 <grid-component>
 
-
-
   <div class="grid-tools">
-    <grid-filter {(rows)}="rows"></grid-filter>
+    <grid-filter {(rows)}="data"></grid-filter>
   </div>
 
   <table>
@@ -21,7 +19,7 @@ items = {{sampleData}}
     </thead>
 
     <tbody>
-      {{#each listData}}
+      {{#each data}}
         <tr class="{{#if isHidden}}hidden{{/if}}">
           <td>{{region}}</td>
           <td>{{amount}}</td>

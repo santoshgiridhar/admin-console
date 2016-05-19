@@ -12,7 +12,7 @@ import _ from 'lodash';
 import 'models/samplegrid1/fixture';
 
 $("#demo").viewModel().attr({
-        listData: new can.List(_.times(10, i => {
+        data: new can.List(_.times(10, i => {
             return {
                 region: ['Europe','America'][i % 2],
                 country: ['AUT','USA','SWE','CAN'][i % 4],

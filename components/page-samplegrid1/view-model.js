@@ -7,7 +7,7 @@ import _ from 'lodash';
 export default can.Map.extend({
   
   define: {
-    sampleData: {
+    data: {
       value: {
         footer: null
       }
@@ -30,8 +30,8 @@ export default can.Map.extend({
       'requestTimeStamp': 1433322546015
     };
 
-    DataModel.findAll(requestOptions, function(data){
-      self.attr('sampleData', data);
+    DataModel.findAll(requestOptions, function(data){ console.log("data---",data);
+      self.attr('data', data);
     });
   }
 });

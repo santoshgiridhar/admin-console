@@ -25,9 +25,9 @@ function getData() {
 }
 
 
-var url = '/samplegrid1';
-can.fixture('POST ' + url, function(options) {
-	console.log('FIXTURE: ' + url, arguments);
+var url = '/samplegrid1'; console.log("santosh-0", url);
+can.fixture('GET ' + url, function(options) {
+	console.log('FIXTURE: ' + url);
 	var params = JSON.parse(options.data);
 	return getData();
 });
