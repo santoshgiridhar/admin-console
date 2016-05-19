@@ -52,7 +52,11 @@
                 <li>
                     <a href="/samplegrid2"><i class="fa fa-fw fa fa-question-circle"></i> Menu_3</a>
                 </li>
+                <a href='#' id='menu-toggle' title='menu'>
+                    <span class='glyphicon glyphicon-chevron-left'></span>
+                </a>
             </ul>
+            
         </div>
         <!-- /.navbar-collapse -->
     </nav>
