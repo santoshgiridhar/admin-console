@@ -21,7 +21,7 @@ items = {{sampleData}}
     </thead>
 
     <tbody>
-      {{#each sampleData}}
+      {{#each listData}}
         <tr class="{{#if isHidden}}hidden{{/if}}">
           <td>{{region}}</td>
           <td>{{amount}}</td>

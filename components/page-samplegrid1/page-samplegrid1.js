@@ -11,7 +11,7 @@ can.Component.extend({
 	events: {
 		'inserted': function() {
 			console.log('loaded sample grid 1');
-			this.viewModel.fetchData();
+			//this.viewModel.fetchData();
 		}
 	}
 });
