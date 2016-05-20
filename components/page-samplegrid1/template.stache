@@ -4,7 +4,7 @@
 <h1>Sample Grid 1</h1>
 
 items = {{data}}
-<grid-component>
+<grid-component {(rows)}="data">
 
   <div class="grid-tools">
     <grid-filter {(rows)}="data"></grid-filter>

@@ -17,51 +17,30 @@
         <!-- Top Menu Items -->
         <ul class="nav navbar-nav navbar-right">
             <li><a href="#" data-placement="bottom" data-toggle="tooltip"><span class="glyphicon glyphicon-user"></span> user3</a></li>
-            <!-- <li><a href="#"><span class="glyphicon glyphicon-bookmark" title="bookmark"></span> </a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-bell" title="notification"></span> </a></li> -->
             <li><a href="#"><span class="glyphicon glyphicon-log-out" title="logout"></span></a></li>
         </ul>
         <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
-            <ul class="nav navbar-nav side-nav">
-                <!-- <li>
-                    <a href="#" data-toggle="collapse" data-target="#submenu-1"><i class="fa fa-fw fa-search"></i> MENU 1 <i class="fa fa-fw fa-angle-down pull-right"></i></a>
-                    <ul id="submenu-1" class="collapse">
-                        <li><a href="#"><i class="fa fa-angle-double-right"></i> SUBMENU 1.1</a></li>
-                        <li><a href="#"><i class="fa fa-angle-double-right"></i> SUBMENU 1.2</a></li>
-                        <li><a href="#"><i class="fa fa-angle-double-right"></i> SUBMENU 1.3</a></li>
-                    </ul>
+            <ul id="wrappers" class="nav navbar-nav side-nav">
+                <li>
+                    <a href="/dashboard"><span class="sub_icon glyphicon glyphicon-link"></span> <span class="menu_text">Menu_1</span>  </a>
                 </li>
                 <li>
-                    <a href="#" data-toggle="collapse" data-target="#submenu-2"><i class="fa fa-fw fa-star"></i>  MENU 2 <i class="fa fa-fw fa-angle-down pull-right"></i></a>
-                    <ul id="submenu-2" class="collapse">
-                        <li><a href="#"><i class="fa fa-angle-double-right"></i> SUBMENU 2.1</a></li>
-                        <li><a href="#"><i class="fa fa-angle-double-right"></i> SUBMENU 2.2</a></li>
-                        <li><a href="#"><i class="fa fa-angle-double-right"></i> SUBMENU 2.3</a></li>
-                    </ul>
-                </li> -->
-                <!-- <li> TODO: Toggle side menu
-                    <a href="#" id="menu-toggle"><i class="fa fa-fw fa-user-plus"></i>  Menu</a>
-                </li> -->
-                <li>
-                    <a href="/dashboard"><i class="fa fa-fw fa-user-plus"></i>  Menu_1</a>
+                    <a href="/samplegrid1"><span class="sub_icon glyphicon glyphicon-cog"></span> <span class="menu_text">Menu_2</span></a>
                 </li>
                 <li>
-                    <a href="/samplegrid1"><i class="fa fa-fw fa-paper-plane-o"></i> Menu_2</a>
+                    <a href="/samplegrid2"><span class="sub_icon glyphicon glyphicon-signal"></span> <span class="menu_text">Menu_3</span></a>
                 </li>
-                <li>
-                    <a href="/samplegrid2"><i class="fa fa-fw fa fa-question-circle"></i> Menu_3</a>
-                </li>
-                <a href='#' id='menu-toggle' title='menu'>
+                <a href='#' id='menu-toggle' class="move-left" title='menu'>
                     <span class='glyphicon glyphicon-chevron-left'></span>
                 </a>
             </ul>
-            
+
         </div>
         <!-- /.navbar-collapse -->
     </nav>
 
-    
+
     <div id="page-wrapper">
         <div class="container-fluid">
             <!-- Page Heading -->

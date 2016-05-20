@@ -25,10 +25,10 @@ function getData() {
 }
 
 
-var url = '/samplegrid1'; console.log("santosh-0", url);
+var url = '/samplegrid2'; 
 can.fixture('GET ' + url, function() {
-  console.log('FIXTURE: ' + url);
-  //var params = JSON.parse(options.data);
+	console.log('FIXTURE: ' + url);
+	//var params = JSON.parse(options.data);
   console.log(getData());
-  return getData();
+	return getData();
 });

@@ -1,130 +1,130 @@
 page-navigation {
-body {
-  padding-top: 50px;
-}
-/*
- * Style tweaks
- * --------------------------------------------------
- */
-html,
-body {
-  overflow-x: hidden; /* Prevent scroll on narrow devices */
-  height: 100%;
-}
-body {
-  padding-top: 70px;
-}
-footer {
-  padding: 30px 0;
-}
-
-/*
- * Off Canvas
- * --------------------------------------------------
- * Greater thav 768px shows the menu by default and also flips the semantics
- * The issue is to show menu for large screens and to hide for small
- * Also need to do something clever to turn off the tabs for when the navigation is hidden
- * Otherwise keyboard users cannot find the focus point
- * (For now I will ignore that for mobile users and also not worry about
- * screen re-sizing popping the menu out.)
- */
-@media screen and (min-width: 768px) {
-  .row-offcanvas {
-    position: relative;
-    -webkit-transition: all .25s ease-out;
-       -moz-transition: all .25s ease-out;
-            transition: all .25s ease-out;
+  .row {
+    margin-left: 0px;
+    margin-right: 0px;
   }
-
-  .row-offcanvas-right {
-    right: 25%;
+  #wrapper {
+    padding-left: 70px;
+    transition: all .4s ease 0s;
+    height: 100%
   }
-
-  .row-offcanvas-left {
-    left: 25%;
+  #sidebar-wrapper {
+    margin-left: -150px;
+    left: 70px;
+    width: 150px;
+    background: #222;
+    position: fixed;
+    height: 100%;
+    z-index: 10000;
+    transition: all .4s ease 0s;
   }
-
-  .row-offcanvas-right .sidebar-offcanvas {
-    right: -25%; /* 3 columns */
-  	background-color: rgb(255, 255, 255);
+  .sidebar-nav {
+    display: block;
+    float: left;
+    width: 150px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
-
-  .row-offcanvas-left .sidebar-offcanvas {
-    left: -25%; /* 3 columns */
-  	background-color: rgb(255, 255, 255);
+  #page-content-wrapper {
+    padding-left: 0;
+    margin-left: 0;
+    width: 100%;
+    height: auto;
   }
-
-  .row-offcanvas-right.active {
-    right: 0; /* 3 columns */
+  #wrapper.active {
+    padding-left: 150px;
   }
-
-  .row-offcanvas-left.active {
-    left: 75px; /* 3 columns */
+  #wrapper.active #sidebar-wrapper {
+    left: 150px;
   }
-
-  .row-offcanvas-right.active .sidebar-offcanvas {
-  	background-color: rgb(254, 254, 254);
+  #page-content-wrapper {
+    width: 100%;
   }
-  .row-offcanvas-left.active .sidebar-offcanvas {
-  	background-color: rgb(254, 254, 254);
+  #sidebar_menu li a, .sidebar-nav li a {
+    color: #999;
+    display: block;
+    float: left;
+    text-decoration: none;
+    width: 150px;
+    background: #252525;
+    border-top: 1px solid #373737;
+    border-bottom: 1px solid #1A1A1A;
+    -webkit-transition: background .5s;
+    -moz-transition: background .5s;
+    -o-transition: background .5s;
+    -ms-transition: background .5s;
+    transition: background .5s;
   }
-
-.row-offcanvas .content {
-    width: 75%; /* 9 columns */
-    -webkit-transition: all .25s ease-out;
-       -moz-transition: all .25s ease-out;
-            transition: all .25s ease-out;
-
+  .sidebar_name {
+    padding-top: 25px;
+    color: #fff;
+    opacity: .7;
   }
-
-  .row-offcanvas.active .content {
-    width: 100%; /* 12 columns */
+  .sidebar-nav li {
+    line-height: 40px;
+    text-indent: 20px;
   }
-       
-  .sidebar-offcanvas {
-    position: absolute;
-    top: 0;
-    width: 25%; /* 3 columns */
+  .sidebar-nav li a {
+    color: #999999;
+    display: block;
+    text-decoration: none;
   }
-}
-@media screen and (max-width: 767px) {
-  .row-offcanvas {
-    position: relative;
-    -webkit-transition: all .25s ease-out;
-       -moz-transition: all .25s ease-out;
-            transition: all .25s ease-out;
+  .sidebar-nav li a:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.2);
+    text-decoration: none;
   }
-
-  .row-offcanvas-right {
-    right: 0;
+  .sidebar-nav li a:active, .sidebar-nav li a:focus {
+    text-decoration: none;
   }
-
-  .row-offcanvas-left {
-    left: 0;
+  .sidebar-nav > .sidebar-brand {
+    height: 65px;
+    line-height: 60px;
+    font-size: 18px;
   }
-
-  .row-offcanvas-right
-  .sidebar-offcanvas {
-    right: -50%; /* 6 columns */
+  .sidebar-nav > .sidebar-brand a {
+    color: #999999;
   }
-
-  .row-offcanvas-left
-  .sidebar-offcanvas {
-    left: -50%; /* 6 columns */
+  .sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
   }
-
-  .row-offcanvas-right.active {
-    right: 50%; /* 6 columns */
+  #main_icon {
+    float: right;
+    padding-right: 65px;
+    padding-top: 20px;
   }
-
-  .row-offcanvas-left.active {
-    left: 50%; /* 6 columns */
+  .sub_icon {
+    float: right;
+    padding-right: 65px;
+    padding-top: 10px;
   }
-
-  .sidebar-offcanvas {
-    position: absolute;
-    top: 0;
-    width: 50%; /* 6 columns */
+  .content-header {
+    height: 65px;
+    line-height: 65px;
   }
-}
+  .content-header h1 {
+    margin: 0;
+    margin-left: 20px;
+    line-height: 65px;
+    display: inline-block;
+  }
+  @media (max-width:767px) {
+    #wrapper {
+      padding-left: 70px;
+      transition: all .4s ease 0s;
+    }
+    #sidebar-wrapper {
+      left: 70px;
+    }
+    #wrapper.active {
+      padding-left: 150px;
+    }
+    #wrapper.active #sidebar-wrapper {
+      left: 150px;
+      width: 150px;
+      transition: all .4s ease 0s;
+    }
+  }
 }

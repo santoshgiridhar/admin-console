@@ -1,1 +1,30 @@
+<can-import from="grid-component/src/styled" />
+<can-import from="grid-filter" />
 <h1>Sample Grid 2</h1>
+
+
+<grid-component {(rows)}="data">
+
+  <div class="grid-tools">
+    <grid-filter {(rows)}="data"></grid-filter>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th ($click)="{sortBy 'region'}">Region {{{sortArrow 'region'}}}</th>
+        <th ($click)="{sortBy 'amount'}">Amount {{{sortArrow 'amount'}}}</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {{#each data}}
+        <tr class="{{#if isHidden}}hidden{{/if}}">
+          <td>{{region}}</td>
+          <td>{{amount}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+
+</grid-component>
