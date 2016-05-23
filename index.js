@@ -17,7 +17,7 @@ import index_template from 'index.stache!';
 //Model
 import AppViewModel from 'app-view-model';
 
-//DB 
+//DB
 //import DB from 'pouchdb'
 
 
@@ -29,8 +29,9 @@ can.route.map(appViewModel);
 
 // Each element that will be set on the app-state must be preceded by a colon
 // Also, set a default value for page (the login page)
+can.route('customers/:customerSlug', {page: 'customers'});
+can.route('banks/:bankSlug', {page: 'banks'});
 can.route(':page');
-can.route(':page/:color');
 
 // Initialize routing
 can.route.ready();

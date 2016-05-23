@@ -1,0 +1,59 @@
+<can-import from="grid-component/src/styled" />
+<can-import from="grid-filter" />
+<h1>Sample Grid 2</h1>
+
+
+
+<grid-component {(rows)}="banks">
+
+  <div class="grid-tools">
+    <grid-filter {(rows)}="banks"></grid-filter>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th ($click)="{sortBy 'index'}">Index {{{sortArrow 'index'}}}</th>
+        <th ($click)="{sortBy 'name'}">Name {{{sortArrow 'name'}}}</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {{#each banks}}
+        <tr class="{{#if isHidden}}hidden{{/if}}">
+          <td>{{index}}</td>
+          <td><a href="/banks/{{slug}}">{{name}}</a></td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+
+</grid-component>
+
+{{#if customers.length}}
+  <grid-component {(rows)}="customers">
+
+    <div class="grid-tools">
+      <grid-filter {(rows)}="customers"></grid-filter>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th ($click)="{sortBy 'index'}">Index {{{sortArrow 'index'}}}</th>
+          <th ($click)="{sortBy 'name'}">Name {{{sortArrow 'name'}}}</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        {{#each customers}}
+          <tr class="{{#if isHidden}}hidden{{/if}}">
+            <td>{{index}}</td>
+            <td><a href="/customers/{{slug}}">{{name}}</a></td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+
+  </grid-component>
+{{/if}}

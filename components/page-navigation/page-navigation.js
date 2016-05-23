@@ -8,7 +8,7 @@ import template from './template.stache!';
 // import template from './template-responsive.stache!';
 import 'components/page-dashboard/';
 import 'components/page-samplegrid1/';
-import 'components/page-samplegrid2/';
+import 'components/page-banks/';
 
 
 
