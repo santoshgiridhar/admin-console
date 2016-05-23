@@ -17,7 +17,8 @@ import index_template from 'index.stache!';
 
 //DB
 //import DB from 'pouchdb'
-
+import Bank from 'models/bank/';
+import Customer from 'models/customer/';
 
 // Create an instance of AppViewModel (appViewModel)
 var AppMap = can.Map.extend({
@@ -29,9 +30,41 @@ var AppMap = can.Map.extend({
       type: 'string',
       serialize: true
     },
-    color: {
+    banks: {
+      get(lastVal, setVal){
+        Bank.findAll({}).then(banks => {
+          setVal(banks);
+        });
+      }
+    },
+    bankSlug: {
       type: 'string',
       serialize: true
+    },
+    currentBank: {
+      get(){
+        let bankSlug = this.attr('bankSlug');
+        let banks = this.attr('banks');
+        if (bankSlug && banks && banks.length) {
+          let currentBank;
+          banks.forEach(bank => {
+            if (bank.slug === bankSlug) {
+              currentBank = bank;
+            }
+          });
+          return currentBank;
+        }
+      }
+    },
+    customers: {
+      get(lastSetVal, setVal){
+        let currentBank = this.attr('currentBank');
+        if (currentBank) {
+          Customer.findAll({bankId: currentBank._id}).then(customers => {
+            setVal(customers);
+          });
+        }
+      }
     }
   }
 });
@@ -45,6 +78,7 @@ can.route.map(appViewModel);
 can.route('customers/:customerSlug', {page: 'customers'});
 can.route('banks/:bankSlug', {page: 'banks'});
 can.route(':page');
+can.route('', {page: 'navigation'});
 
 // Initialize routing
 can.route.ready();
@@ -54,6 +88,3 @@ can.route.ready();
 //$('#app').html(index(appViewModel));
 
 $(document.body).append(index_template(appViewModel));
-
-
-appViewModel.attr('page', 'navigation');

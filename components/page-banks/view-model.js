@@ -1,6 +1,6 @@
 import can from 'can';
 import 'can/map/define/';
-import DataModel from 'models/bank/';
+import Bank from 'models/bank/';
 import Customer from 'models/customer/';
 import _ from 'lodash';
 
@@ -10,35 +10,6 @@ export default can.Map.extend({
     banks: {
       value: {
         footer: null
-      }
-    },
-    bankSlug: {
-      get(){
-        return can.route.attr('bankSlug');
-      }
-    },
-    currentBank: {
-      get(){
-        let bankSlug = this.attr('bankSlug');
-        if (bankSlug) {
-          let currentBank;
-          this.attr('banks').forEach(bank => {
-            if (bank.slug === bankSlug) {
-              currentBank = bank;
-            }
-          });
-          return currentBank;
-        }
-      }
-    },
-    customers: {
-      get(lastSetVal, setVal){
-        let currentBank = this.attr('currentBank');
-        if (currentBank) {
-          Customer.findAll({bankId: currentBank._id}).then(customers => {
-            setVal(customers);
-          });
-        }
       }
     }
   },
@@ -57,7 +28,7 @@ export default can.Map.extend({
       'requestTimeStamp': 1433322546015
     };
 
-    DataModel.findAll(requestOptions, function(data){
+    Bank.findAll(requestOptions, function(data){
       self.attr('banks', data);
     });
   }
