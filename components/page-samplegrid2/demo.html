@@ -11,6 +11,9 @@ import bootstrap from 'bootstrap';
 import _ from 'lodash';
 import 'models/samplegrid2/fixture';
 
+//Get list of index and Name
+//From Name get bank name, amount and active status
+//if Active get Name, Gender, Phone, Address and date registered
 
 $("#demo").viewModel().attr({
         data: new can.List(_.times(10, i => {

@@ -3,11 +3,8 @@
 <h1>Sample Grid 2</h1>
 
 
-<grid-component {(rows)}="data"
-		load-on-scroll="true"
-        scroll-throttle-interval="100"
-        scroll-bottom-distance="0.25"
-        scroll-event-name="grid-should-load-more">
+
+<grid-component {(rows)}="data">
 
   <div class="grid-tools">
     <grid-filter {(rows)}="data"></grid-filter>
@@ -16,16 +13,16 @@
   <table>
     <thead>
       <tr>
-        <th ($click)="{sortBy 'region'}">Region {{{sortArrow 'region'}}}</th>
-        <th ($click)="{sortBy 'amount'}">Amount {{{sortArrow 'amount'}}}</th>
+        <th ($click)="{sortBy 'index'}">Index {{{sortArrow 'index'}}}</th>
+        <th ($click)="{sortBy 'name'}">Name {{{sortArrow 'name'}}}</th>
       </tr>
     </thead>
 
     <tbody>
       {{#each data}}
         <tr class="{{#if isHidden}}hidden{{/if}}">
-          <td>{{region}}</td>
-          <td>{{amount}}</td>
+          <td>{{index}}</td>        
+          <td><a href="/samplegrid21">{{name}}</a></td>
         </tr>
       {{/each}}
     </tbody>
