@@ -29,7 +29,7 @@
                     <a href="/samplegrid1"><span class="sub_icon glyphicon glyphicon-cog"></span> <span class="menu_text">Menu_2</span></a>
                 </li>
                 <li>
-                    <a href="/banks"><span class="sub_icon glyphicon glyphicon-signal"></span> <span class="menu_text">Menu_3</span></a>
+                    <a href="/banks"><span class="sub_icon glyphicon glyphicon-signal"></span> <span class="menu_text">Banks</span></a>
                 </li>
                 <a href='#' id='menu-toggle' class="move-left" title='menu'>
                     <span class='glyphicon glyphicon-chevron-left'></span>

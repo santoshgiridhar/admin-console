@@ -20,7 +20,7 @@ import index_template from 'index.stache!';
 
 
 // Create an instance of AppViewModel (appViewModel)
-var ApplicationViewModel = can.Map.extend({
+var AppMap = can.Map.extend({
   define: {
     '*': {
       serialize: false
@@ -35,7 +35,7 @@ var ApplicationViewModel = can.Map.extend({
     }
   }
 });
-var appViewModel = new AppViewModel({});
+var appViewModel = new AppMap({});
 
 // Make appState the route's internal can.Map
 can.route.map(appViewModel);
