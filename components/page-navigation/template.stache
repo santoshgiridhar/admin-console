@@ -57,6 +57,9 @@
                         {{#case "samplegrid2"}}
                             <page-samplegrid2></page-samplegrid2>
                         {{/case}}
+                         {{#case "samplegrid11"}}
+                            <page-samplegrid11></page-samplegrid11>
+                        {{/case}}
                     {{/switch}}
                 </div>
             </div>

@@ -7,12 +7,6 @@
   <li class="active">Sample Grid 1</li>
 </ul>
 
-{{#switch page}}
-    {{#case "samplegrid11"}}
-        <page-samplegrid11></page-samplegrid11>
-    {{/case}}
-{{/switch}}
-
 <grid-component {(rows)}="data">
 
   <div class="grid-tools">

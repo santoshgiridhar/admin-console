@@ -4,6 +4,8 @@ import 'can/map/define/';
 import URL from 'utils/urls';
 import $ from 'jquery';
 
+import 'models/samplegrid2/fixture';
+
 var Model = can.Model.extend({
 	parseModels: 'sampleData',
 

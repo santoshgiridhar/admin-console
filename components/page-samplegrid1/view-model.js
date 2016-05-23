@@ -3,7 +3,6 @@ import 'can/map/define/';
 import DataModel from 'models/samplegrid1/';
 import _ from 'lodash';
 
-
 export default can.Map.extend({
   
   define: {

@@ -32,4 +32,4 @@ can.fixture('GET ' + url, function() {
   console.log(getData());
 	return getData();
 })
-can.fixture.delay = 5000;
+//can.fixture.delay = 5000;

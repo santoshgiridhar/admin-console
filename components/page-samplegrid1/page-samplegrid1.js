@@ -4,6 +4,8 @@ import './style.less!';
 import VM from './view-model';
 import template from './template.stache!';
 
+import 'components/page-samplegrid11/';
+
 can.Component.extend({
 	tag: 'page-samplegrid1',
 	viewModel: VM,

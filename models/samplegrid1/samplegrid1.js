@@ -3,6 +3,7 @@ import 'can/util/fixture/';
 import 'can/map/define/';
 import URL from 'utils/urls';
 import $ from 'jquery';
+import 'models/samplegrid1/fixture';
 
 var Model = can.Model.extend({
 	parseModels: 'sampleData',
