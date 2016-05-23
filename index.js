@@ -14,23 +14,37 @@ import 'components/page-navigation/';
 import index_template from 'index.stache!';
 //import 'index.less!'; //Not used currently
 
-//Model
-import AppViewModel from 'app-view-model';
 
-//DB 
+//DB
 //import DB from 'pouchdb'
 
 
 // Create an instance of AppViewModel (appViewModel)
-var appViewModel = new AppViewModel({});
+var AppMap = can.Map.extend({
+  define: {
+    '*': {
+      serialize: false
+    },
+    page: {
+      type: 'string',
+      serialize: true
+    },
+    color: {
+      type: 'string',
+      serialize: true
+    }
+  }
+});
+var appViewModel = new AppMap({});
 
 // Make appState the route's internal can.Map
 can.route.map(appViewModel);
 
 // Each element that will be set on the app-state must be preceded by a colon
 // Also, set a default value for page (the login page)
+can.route('customers/:customerSlug', {page: 'customers'});
+can.route('banks/:bankSlug', {page: 'banks'});
 can.route(':page');
-can.route(':page/:color');
 
 // Initialize routing
 can.route.ready();

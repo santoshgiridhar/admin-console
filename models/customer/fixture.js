@@ -11,13 +11,14 @@ var i = -1,
  * [getData description]
  * @return {[type]} [description]
  */
-function getData() {
+function getData(params) {
   var sample_data = {
     'sampleData': [{
       "_id": "5742f6a58ce657183f6e3b8a",
       "index": 0,
       "name": "Gena Hunt",
-      "bankName": "nostrud ullamco",
+      "bankId": "28dm1",
+      "bankSlug": "bank-1",
       "isActive": false,
       "balance": "$2,634.01",
       "gender": "female",
@@ -28,7 +29,8 @@ function getData() {
       "_id": "5742f6a58874b7ecc8764447",
       "index": 1,
       "name": "Wiley Norris",
-      "bankName": "voluptate commodo",
+      "bankId": "28dm1",
+      "bankSlug": "bank-1",
       "isActive": false,
       "balance": "$1,904.83",
       "gender": "male",
@@ -39,7 +41,8 @@ function getData() {
       "_id": "5742f6a5160f1cabcdb98d87",
       "index": 2,
       "name": "Sykes Hampton",
-      "bankName": "incididunt ex",
+      "bankId": "28dm1",
+      "bankSlug": "bank-1",
       "isActive": true,
       "balance": "$2,734.66",
       "gender": "male",
@@ -50,7 +53,8 @@ function getData() {
       "_id": "5742f6a532fc6644105981e1",
       "index": 3,
       "name": "Serena Conner",
-      "bankName": "ea velit",
+      "bankId": "13tb2",
+      "bankSlug": "bank-2",
       "isActive": true,
       "balance": "$2,368.77",
       "gender": "female",
@@ -61,7 +65,8 @@ function getData() {
       "_id": "5742f6a59aaee51c915db5b4",
       "index": 4,
       "name": "Clay Ramsey",
-      "bankName": "anim aliqua",
+      "bankId": "13tb2",
+      "bankSlug": "bank-2",
       "isActive": true,
       "balance": "$2,687.53",
       "gender": "male",
@@ -72,7 +77,8 @@ function getData() {
       "_id": "5742f6a55d58c1bd03f8e4f2",
       "index": 5,
       "name": "Richard Underwood",
-      "bankName": "proident consequat",
+      "bankId": "13tb2",
+      "bankSlug": "bank-2",
       "isActive": true,
       "balance": "$3,602.70",
       "gender": "male",
@@ -83,7 +89,8 @@ function getData() {
       "_id": "5742f6a58add2af2eb10ba3e",
       "index": 6,
       "name": "Hawkins Pollard",
-      "bankName": "eu minim",
+      "bankId": "13tb2",
+      "bankSlug": "bank-2",
       "isActive": false,
       "balance": "$2,320.58",
       "gender": "male",
@@ -94,7 +101,8 @@ function getData() {
       "_id": "5742f6a59cadaf26443c2a0a",
       "index": 7,
       "name": "Sherman Sloan",
-      "bankName": "excepteur eu",
+      "bankId": "52zr3",
+      "bankSlug": "bank-3",
       "isActive": false,
       "balance": "$2,671.55",
       "gender": "male",
@@ -105,7 +113,8 @@ function getData() {
       "_id": "5742f6a52256e94126afa388",
       "index": 8,
       "name": "Meyers Guy",
-      "bankName": "anim et",
+      "bankId": "52zr3",
+      "bankSlug": "bank-3",
       "isActive": false,
       "balance": "$2,939.92",
       "gender": "male",
@@ -116,7 +125,8 @@ function getData() {
       "_id": "5742f6a5f4040a2ae35c3308",
       "index": 9,
       "name": "Susanne Boone",
-      "bankName": "consequat elit",
+      "bankId": "52zr3",
+      "bankSlug": "bank-3",
       "isActive": false,
       "balance": "$3,051.59",
       "gender": "female",
@@ -125,16 +135,18 @@ function getData() {
       "registered": "2014-11-24T06:17:54 -06:-30"
     }]
   };
+  sample_data.sampleData = sample_data.sampleData.filter(customer => {
+    return customer.bankId === params.bankId;
+  });
   return sample_data;
 }
 
 
 
-var url = '/samplegrid2';
-can.fixture('GET ' + url, function() {
-    console.log('FIXTURE: ' + url);
-    //var params = JSON.parse(options.data);
-    console.log(getData());
-    return getData();
-  })
-  //can.fixture.delay = 5000;
+var url = '/customers';
+can.fixture('GET ' + url, function(params) {
+  console.log('FIXTURE: ' + url);
+  //var params = JSON.parse(options.data);
+  return getData(params.data);
+});
+//can.fixture.delay = 5000;

@@ -5,7 +5,7 @@ import VM from './view-model';
 import template from './template.stache!';
 
 can.Component.extend({
-	tag: 'page-samplegrid2',
+	tag: 'page-banks',
 	viewModel: VM,
 	template: template,
 	events: {
