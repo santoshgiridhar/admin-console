@@ -33,8 +33,5 @@ export default can.Map.extend({
     DataModel.findAll(requestOptions, function(data){ console.log("data--- ",data);
       self.attr('data', data);
     });
-  },
-  navigateSubGrid: function(){
-    
   }
 });

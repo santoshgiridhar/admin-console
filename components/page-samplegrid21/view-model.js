@@ -1,8 +1,7 @@
 import can from 'can';
 import 'can/map/define/';
-import DataModel from 'models/samplegrid1/';
+import DataModel from 'models/samplegrid2/';
 import _ from 'lodash';
-
 
 export default can.Map.extend({
   
@@ -14,7 +13,6 @@ export default can.Map.extend({
     },
 
   },
-  items:{'test':'test'},
   fetchData: function(){
     var self = this;
 
@@ -30,11 +28,8 @@ export default can.Map.extend({
       'requestTimeStamp': 1433322546015
     };
 
-    DataModel.findAll(requestOptions, function(data){ console.log("data--- ",data);
+    DataModel.findAll(requestOptions, function(data){ 
       self.attr('data', data);
     });
-  },
-  navigateSubGrid: function(){
-    
   }
 });

@@ -31,4 +31,5 @@ can.fixture('GET ' + url, function() {
 	//var params = JSON.parse(options.data);
   console.log(getData());
 	return getData();
-});
+})
+can.fixture.delay = 5000;

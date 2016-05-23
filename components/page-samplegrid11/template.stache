@@ -2,14 +2,14 @@
 <!-- <can-import from="node_modules/grid-component/src/styles.less!" /> -->
 <can-import from="grid-filter" />
 
-<!-- //items = {{data}} -->
 <ul class="breadcrumb">
-  <li class="active">Sample Grid 1</li>
+  <li><a href="/samplegrid1">Sample Grid 1</a></li>
+  <li class="active">Sample Grid Sub Grid - 1</li>
 </ul>
 
 {{#switch page}}
-    {{#case "samplegrid11"}}
-        <page-samplegrid11></page-samplegrid11>
+    {{#case "samplegrid1"}}
+        <page-samplegrid1></page-samplegrid1>
     {{/case}}
 {{/switch}}
 
@@ -23,8 +23,7 @@
     <thead>
       <tr>
         <th ($click)="{sortBy 'country'}">Country {{{sortArrow 'country'}}}</th>
-        <th ($click)="{sortBy 'region'}">Region {{{sortArrow 'region'}}}</th>
-        <th ($click)="{sortBy 'amount'}">Amount {{{sortArrow 'amount'}}}</th>
+        <th ($click)="{sortBy 'currency'}">Currency {{{sortArrow 'currency'}}}</th>
       </tr>
     </thead>
 
@@ -32,8 +31,7 @@
       {{#each data}}
         <tr class="{{#if isHidden}}hidden{{/if}}">
           <td>{{country}}</td>
-          <td><a href="/samplegrid11">{{region}}</a></td>
-          <td>{{amount}}</td>
+          <td>{{currency}}</td>
         </tr>
       {{/each}}
     </tbody>
