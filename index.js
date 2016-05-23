@@ -14,14 +14,27 @@ import 'components/page-navigation/';
 import index_template from 'index.stache!';
 //import 'index.less!'; //Not used currently
 
-//Model
-import AppViewModel from 'app-view-model';
 
 //DB
 //import DB from 'pouchdb'
 
 
 // Create an instance of AppViewModel (appViewModel)
+var ApplicationViewModel = can.Map.extend({
+  define: {
+    '*': {
+      serialize: false
+    },
+    page: {
+      type: 'string',
+      serialize: true
+    },
+    color: {
+      type: 'string',
+      serialize: true
+    }
+  }
+});
 var appViewModel = new AppViewModel({});
 
 // Make appState the route's internal can.Map
