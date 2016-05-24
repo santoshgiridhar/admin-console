@@ -26,9 +26,6 @@
     "paths": {
       "bootstrap.css": "node_modules/bootstrap/dist/css/bootstrap.css"
     },
-    "npmAlgorithm": "flat",
-    "configDependencies": [
-      "live-reload"
-    ]
+    "npmAlgorithm": "flat"    
   }
 }

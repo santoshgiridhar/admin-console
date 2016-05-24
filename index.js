@@ -65,6 +65,31 @@ var AppMap = can.Map.extend({
           });
         }
       }
+    },
+    currentCustomer: {
+      get(){
+        let customerSlug = this.attr('customerSlug');
+        let customers = this.attr('customers');
+        if (customerSlug && banks && customers.length) {
+          let currentCustomer;
+          banks.forEach(customer => {
+            if (customer.slug === customerSlug) {
+              currentCustomer = customer;
+            }
+          });
+          return currentCustomer;
+        }
+      }
+    },
+    customerDetails: {
+      get(lastSetVal, setVal){
+        let currentCustomer = this.attr('currentCustomer');
+        if (currentCustomer) {
+          Customer.findAll({customerId: currentCustomer._id}).then(customers => {
+            setVal(customers);
+          });
+        }
+      }
     }
   }
 });

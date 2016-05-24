@@ -53,7 +53,7 @@
             <td>{{index}}</td>
             <td>{{name}}</td>
             <td>{{balance}}</td>
-            <td>{{#if isActive}}<a href="/customers/{{slug}}">Details</a>{{else}}Details{{/if}}</td>
+            <td>{{#if isActive}}<a href="/customers/{{customerSlug}}">Details</a>{{else}}Details{{/if}}</td>
           </tr>
         {{/each}}
       </tbody>

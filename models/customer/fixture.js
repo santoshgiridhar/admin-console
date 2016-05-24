@@ -15,6 +15,7 @@ function getData(params) {
   var sample_data = {
     'sampleData': [{
       "_id": "5742f6a58ce657183f6e3b8a",
+      "customerSlug": "5742f6a58ce657183f6e3b8a",
       "index": 0,
       "name": "Gena Hunt",
       "bankId": "28dm1",
@@ -27,6 +28,7 @@ function getData(params) {
       "registered": "2014-05-09T12:51:53 -06:-30"
     }, {
       "_id": "5742f6a58874b7ecc8764447",
+      "customerSlug": "5742f6a58874b7ecc8764447",
       "index": 1,
       "name": "Wiley Norris",
       "bankId": "28dm1",
@@ -39,6 +41,7 @@ function getData(params) {
       "registered": "2016-02-14T02:23:46 -06:-30"
     }, {
       "_id": "5742f6a5160f1cabcdb98d87",
+      "customerSlug": "5742f6a5160f1cabcdb98d87",
       "index": 2,
       "name": "Sykes Hampton",
       "bankId": "28dm1",
@@ -51,6 +54,7 @@ function getData(params) {
       "registered": "2015-01-30T04:30:01 -06:-30"
     }, {
       "_id": "5742f6a532fc6644105981e1",
+      "customerSlug": "5742f6a532fc6644105981e1",
       "index": 3,
       "name": "Serena Conner",
       "bankId": "13tb2",
@@ -63,6 +67,7 @@ function getData(params) {
       "registered": "2016-04-15T05:57:30 -06:-30"
     }, {
       "_id": "5742f6a59aaee51c915db5b4",
+      "customerSlug": "5742f6a59aaee51c915db5b4",
       "index": 4,
       "name": "Clay Ramsey",
       "bankId": "13tb2",
@@ -75,6 +80,7 @@ function getData(params) {
       "registered": "2016-03-18T07:13:45 -06:-30"
     }, {
       "_id": "5742f6a55d58c1bd03f8e4f2",
+      "customerSlug": "5742f6a55d58c1bd03f8e4f2",
       "index": 5,
       "name": "Richard Underwood",
       "bankId": "13tb2",
@@ -87,6 +93,7 @@ function getData(params) {
       "registered": "2016-03-27T02:49:56 -06:-30"
     }, {
       "_id": "5742f6a58add2af2eb10ba3e",
+      "customerSlug": "5742f6a58add2af2eb10ba3e",
       "index": 6,
       "name": "Hawkins Pollard",
       "bankId": "13tb2",
@@ -99,6 +106,7 @@ function getData(params) {
       "registered": "2014-10-11T07:38:39 -06:-30"
     }, {
       "_id": "5742f6a59cadaf26443c2a0a",
+      "customerSlug": "5742f6a59cadaf26443c2a0a",
       "index": 7,
       "name": "Sherman Sloan",
       "bankId": "52zr3",
@@ -111,6 +119,7 @@ function getData(params) {
       "registered": "2015-03-13T01:30:26 -06:-30"
     }, {
       "_id": "5742f6a52256e94126afa388",
+      "customerSlug": "5742f6a52256e94126afa388",
       "index": 8,
       "name": "Meyers Guy",
       "bankId": "52zr3",
@@ -123,6 +132,7 @@ function getData(params) {
       "registered": "2014-10-15T01:24:23 -06:-30"
     }, {
       "_id": "5742f6a5f4040a2ae35c3308",
+      "customerSlug": "5742f6a5f4040a2ae35c3308",
       "index": 9,
       "name": "Susanne Boone",
       "bankId": "52zr3",
