@@ -1,26 +1,26 @@
-# admin-module - Simple canjs login and navigation module
+# admin-console - Simple canjs login and navigation console
 
 This project is an application for a typical CanJS web app.
 
 ## Getting Started
 
-To get you started you can simply clone the admin-module repository and install the dependencies:
+To get you started you can simply clone the admin-console repository and install the dependencies:
 
 ### Prerequisites
 
-You need git to clone the admin-module repository. You can get git from
+You need git to clone the admin-console repository. You can get git from
 [http://git-scm.com/](http://git-scm.com/).
 
 We also use a number of node.js tools to initialize and test angular-seed. You must have node.js and
 its package manager (npm) installed.  You can get them from [http://nodejs.org/](http://nodejs.org/).
 
-### Clone admin-module
+### Clone admin-console
 
-Clone the admin-module repository using [git][git]:
+Clone the admin-console repository using [git][git]:
 
 ```
-git clone https://github.com/santoshgiridhar/admin-module.git
-cd admin-module
+git clone https://github.com/santoshgiridhar/admin-console.git
+cd admin-console
 ```
 
 ### Install Dependencies
@@ -29,7 +29,7 @@ cd admin-module
 npm install
 ```
 
-* `node_modules` - contains the npm packages for the tools we need
+* `node_consoles` - contains the npm packages for the tools we need
 
 ### Run the Application
 
@@ -44,10 +44,10 @@ Now browse to the app at `http://localhost:8000/index.html`.
 ## Directory Layout
 
 ```
-admin-module/                    --> all of the source files for the application
+admin-console/                    --> all of the source files for the application
   index.css               --> default stylesheet
   index.less               --> default stylesheet
-  components/           --> all app specific modules
+  components/           --> all app specific consoles
     page-login
       page-login
       template.stache
@@ -56,7 +56,7 @@ admin-module/                    --> all of the source files for the application
       demo.html
       test.js
       test.html    
-  index.js                --> main application module
+  index.js                --> main application console
   index.html            --> app layout file (the main html template file of the app)
 ```
 

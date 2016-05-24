@@ -42,6 +42,8 @@
         <tr>
           <th ($click)="{sortBy 'index'}">Index {{{sortArrow 'index'}}}</th>
           <th ($click)="{sortBy 'name'}">Name {{{sortArrow 'name'}}}</th>
+          <th ($click)="{sortBy 'balance'}">Balance {{{sortArrow 'balance'}}}</th>
+          <th ($click)="{sortBy 'isActive'}">Details {{{sortArrow 'isActive'}}}</th>
         </tr>
       </thead>
 
@@ -49,7 +51,9 @@
         {{#each customers}}
           <tr class="{{#if isHidden}}hidden{{/if}}">
             <td>{{index}}</td>
-            <td><a href="/customers/{{slug}}">{{name}}</a></td>
+            <td>{{name}}</td>
+            <td>{{balance}}</td>
+            <td>{{#if isActive}}<a href="/customers/{{slug}}">Details</a>{{else}}Details{{/if}}</td>
           </tr>
         {{/each}}
       </tbody>
