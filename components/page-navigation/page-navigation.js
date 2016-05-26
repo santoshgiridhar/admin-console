@@ -19,7 +19,7 @@ can.Component.extend({
 			console.log('loaded navigation');
 			$('#menu-toggle').click(function(e) {
 				$(this).find('i').toggleClass('glyphicon-chevron-left').toggleClass('glyphicon-chevron-right');
-				$("#wrappers").find('span').toggleClass('hide').toggleClass('show');
+				$("#wrappers").find('span').toggleClass('hide-inline').toggleClass('show-inline');
 			});
 
 		}

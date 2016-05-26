@@ -23,13 +23,13 @@
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul id="wrappers" class="nav navbar-nav side-nav">
                 <li>
-                    <a href="/dashboard"><span class="sub_icon glyphicon glyphicon-link"></span> <span class="menu-text show">Menu_1</span>  </a>
+                    <a href="/dashboard"><span class="sub_icon glyphicon glyphicon-link"></span> <span class="menu-text show-inline">Menu_1</span>  </a>
                 </li>
                 <li>
-                    <a href="/samplegrid1"><span class="sub_icon glyphicon glyphicon-cog"></span> <span class="menu-text show">Menu_2</span></a>
+                    <a href="/samplegrid1"><span class="sub_icon glyphicon glyphicon-cog"></span> <span class="menu-text show-inline">Menu_2</span></a>
                 </li>
                 <li>
-                    <a href="/banks"><span class="sub_icon glyphicon glyphicon-signal"></span> <span class="menu-text show">Banks</span></a>
+                    <a href="/banks"><span class="sub_icon glyphicon glyphicon-signal"></span> <span class="menu-text show-inline">Banks</span></a>
                 </li>
                 <a href="#" id="menu-toggle" class="menu-toggle" title="menu">
                     <i class='glyphicon glyphicon-chevron-left' title="toggle"></i>

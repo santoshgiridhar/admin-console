@@ -6,7 +6,8 @@ page-navigation {
         /*html, body, #wrapper, #page-wrapper {height: 100%; overflow: hidden;}*/
     }
     @media(max-width: 768px) {
-        .menu-text, .menu-toggle {
+        .menu-text,
+        .menu-toggle {
             display: none;
         }
     }
@@ -53,9 +54,6 @@ page-navigation {
         .side-nav > li > a {
             width: 150px;
             border-bottom: 1px rgba(0, 0, 0, .3) solid;
-        }
-        .side-nav > li > a > span{
-          display: block;
         }
         .side-nav li a:focus,
         .side-nav li a:hover {
@@ -111,10 +109,16 @@ page-navigation {
         position: fixed;
         padding: 15px 15px 15px 50px;
     }
-    .menu-text .hide{
-      display: none;
+    .menu-text .hide-inline {
+        display: none;
     }
-    .menu-text .show{
-      display: block;
+    // .menu-text .show{
+    //   display: block;
+    // }
+    page-navigation .side-nav > li > a > span.sub_icon {
+        display: inline-block;
+    }
+    page-navigation .side-nav > li > a > span.menu-text.show-inline {
+        display: inline-block !important;
     }
 }
