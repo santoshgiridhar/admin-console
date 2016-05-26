@@ -5,6 +5,11 @@ page-navigation {
         }
         /*html, body, #wrapper, #page-wrapper {height: 100%; overflow: hidden;}*/
     }
+    @media(max-width: 768px) {
+        span.menu_text {
+            display: none;
+        }
+    }
     #wrapper {
         padding-left: 0;
     }
@@ -94,17 +99,13 @@ page-navigation {
         padding: 5px 15px;
     }
     .nav a#menu-toggle {
-        outline: 0;
+        display: block;
+        float: left;
         color: white;
-        font-size: 16px;
-        font-style: normal;
-        position: absolute;
-        bottom: 10px;
-    }
-    .nav a#menu-toggle.move-left {
-        left: 50%;
-    }
-    .nav a#menu-toggle.move-right {
-        right: 10%;
+        width: 150px;
+        border-bottom: 1px rgba(0, 0, 0, .3) solid;
+        padding: 15px;
+        bottom: 0;
+        position: fixed;
     }
 }
