@@ -29,7 +29,7 @@ export default can.Map.extend({
             }
         },
         isRequired: {
-            value: false,
+            value: true,
             type: 'boolean'
         },
         myVal: {
@@ -48,5 +48,9 @@ export default can.Map.extend({
     doValidate: function() {
         console.log(this.validate());
         this.validate();
+    },
+    doReset: function(){
+      this.attr('myNum','default error');
+      this.attr('myVal','');
     }
 });

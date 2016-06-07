@@ -58,16 +58,17 @@
         <div class="input-group">
             <p>You can also validate all properties at once</p>
             <button type="button" class="btn btn-primary" can-click="doValidate">Validate All</button>
+            <button type="button" class="btn btn-primary" can-click="doReset">Reset All</button>
         </div>
     </div>
     <ul class="list-group">
-        {{#errors}}
-            {{#myVal}}
+        
+            {{#errors.myVal}}
                 <li class="list-group-item list-group-item-danger">{{.}}</li>
-            {{/myVal}}
-            {{#myNum}}
+            {{/errors.myVal}}
+            {{#errors.myNum}}
                 <li class="list-group-item list-group-item-danger">{{.}}</li>
-            {{/myNum}}
-        {{/errors}}
+            {{/errors.myNum}}
+
     </ul>
 </div>
