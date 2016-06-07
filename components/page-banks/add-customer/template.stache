@@ -3,7 +3,7 @@
     <li><a href="/banks">Bank</a></li>
     <li class="active">Add Customer</li>
 </ul>
-<form class="add-customerForm">
+<!-- <form class="add-customerForm">
     <div class="form-group row">
         <label for="customerName" class="col-sm-2 form-control-label">Name</label>
         <div class="col-sm-10">
@@ -24,8 +24,50 @@
     </div>
     <div class="form-group row">
         <div class="col-sm-offset-2 col-sm-10">
-            <input type="submit" class="btn btn-primary btn-custom-small" can-click="add-customer" value="Save" />
+            <input type="button" class="btn btn-primary btn-custom-small" can-click="addCustomer" value="Save" />
             <input type="button" class="btn btn-primary btn-custom-small" can-click="resetCustomer" value="Cancel" />
         </div>
     </div>
-</form>
+</form> -->
+
+<h1>can.Map Validate Plugin Demo</h1>
+
+<p>The value <code>myVal</code> should be at least 6 characters long. The value <code>myNum</code> should just be a number greater than 5.</p>
+
+<p>Current value of <code>myVal</code>: <code>[{{myMap.myVal}}]</code>
+    <br> Current value of <code>myNum</code>: <code>[{{myMap.myNum}}]</code></p>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Validation Test</h3>
+    </div>
+    <div class="panel-body">
+        <p>Validation happens when a property&rsquo;s setter is called. In the following examples, this happens when the field&rsquo;s value changes.</p>
+        <div class="form-group">
+            <label for="test1">MyVal required?</label>
+            <input class="form-control" id="test" type="checkbox" can-value="isRequired">
+        </div>
+        <div class="form-group">
+            <label for="test1">MyVal</label>
+            <input class="form-control" id="test1" type="text" can-value="myVal">
+        </div>
+        <div class="form-group">
+            <label for="test2">MyNum</label>
+            <input class="form-control" id="test2" type="text" can-value="myNum">
+        </div>
+        <div class="input-group">
+            <p>You can also validate all properties at once</p>
+            <button type="button" class="btn btn-primary" can-click="doValidate">Validate All</button>
+        </div>
+    </div>
+    <ul class="list-group">
+        {{#errors}}
+            {{#myVal}}
+                <li class="list-group-item list-group-item-danger">{{.}}</li>
+            {{/myVal}}
+            {{#myNum}}
+                <li class="list-group-item list-group-item-danger">{{.}}</li>
+            {{/myNum}}
+        {{/errors}}
+    </ul>
+</div>
