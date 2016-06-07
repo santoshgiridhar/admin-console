@@ -3,7 +3,7 @@
 <can-import from="grid-filter" />
 
 <ul class="breadcrumb">
-  <li><a href="/samplegrid1">Sample Grid 1</a></li>
+  <li><a href="/services">Sample Grid 1</a></li>
   <li class="active">Sample Grid Sub Grid - 1</li>
 </ul>
 

@@ -2,7 +2,7 @@
 <can-import from="grid-filter" />
 <h1>Sample Grid 2</h1>
 
-
+<a href="/addCustomer" class="btn btn-primary btn-custom-small" title="Services">Add Customer</a>
 
 <grid-component {(rows)}="banks">
 

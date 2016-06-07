@@ -60,6 +60,9 @@
                          {{#case "samplegrid11"}}
                             <page-samplegrid11></page-samplegrid11>
                         {{/case}}
+                        {{#case "addCustomer"}}
+                           <add-customer></add-customer>
+                       {{/case}}
                     {{/switch}}
                 </div>
             </div>

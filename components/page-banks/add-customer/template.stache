@@ -1,0 +1,31 @@
+<h3>Add Customer</h3>
+<ul class="breadcrumb">
+    <li><a href="/banks">Bank</a></li>
+    <li class="active">Add Customer</li>
+</ul>
+<form class="add-customerForm">
+    <div class="form-group row">
+        <label for="customerName" class="col-sm-2 form-control-label">Name</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control custom-width" can-value="{newCustomer.name}" placeholder="Customer Name" required />
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="customerId" class="col-sm-2 form-control-label">Customer ID</label>
+        <div class="col-sm-10">
+            <input type="number" class="form-control" can-value="{newCustomer.id}" placeholder="Customer ID" required>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="customerEnauk" class="col-sm-2 form-control-label">Email</label>
+        <div class="col-sm-10">
+            <input type="email" class="form-control" can-value="{newCustomer.email}" placeholder="Customer Email" required>
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-sm-offset-2 col-sm-10">
+            <input type="submit" class="btn btn-primary btn-custom-small" can-click="add-customer" value="Save" />
+            <input type="button" class="btn btn-primary btn-custom-small" can-click="resetCustomer" value="Cancel" />
+        </div>
+    </div>
+</form>

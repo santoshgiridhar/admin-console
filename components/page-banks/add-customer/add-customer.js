@@ -3,16 +3,15 @@ import Component from 'can/component/';
 import './style.less!';
 import VM from './view-model';
 import template from './template.stache!';
-import 'components/page-banks/add-customer/';
 
 can.Component.extend({
-	tag: 'page-banks',
+	tag: 'add-customer',
 	viewModel: VM,
 	template: template,
 	events: {
 		'inserted': function() {
-			console.log('loaded sample grid 2');
-			this.viewModel.fetchData();
+			console.log('loaded add customer');
+
 		}
 	}
 });
